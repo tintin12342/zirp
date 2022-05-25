@@ -6,8 +6,9 @@ from sklearn.metrics import classification_report, confusion_matrix
 from sklearn.metrics import silhouette_samples, silhouette_score
 import matplotlib.cm as cm
 from sklearn.cluster import KMeans
-from sklearn.datasets import make_blobs
+from sklearn import metrics
 import matplotlib.pyplot as plt
+from sklearn.metrics import davies_bouldin_score
 
 
 def write_results(title, text):
@@ -69,7 +70,7 @@ class KNN:
         return self.data
 
 
-class Estimator:
+class DetermineCluster:
 
     def __init__(self, data):
         self.data = data
@@ -81,6 +82,7 @@ class Estimator:
             kmean_model = KMeans(n_clusters=k)
             kmean_model.fit(self.data)
             distortions.append(kmean_model.inertia_)
+            print(k, distortions)
 
         plt.figure(figsize=(10, 5))
         plt.plot(K, distortions, 'bx-')
@@ -88,6 +90,24 @@ class Estimator:
         plt.ylabel('Distortion')
         plt.title('The Elbow Method showing the optimal k')
         plt.show()
+
+    def davies_bouldin_index(self, rangeTo):
+        X = self.data.loc[:, self.data.columns != 'CO2 Ratings']
+        K = range(2, rangeTo)
+
+        for k in K:
+            kmeans = KMeans(n_clusters=k, random_state=1).fit(X)
+            labels = kmeans.labels_
+            print(k, davies_bouldin_score(X, labels))
+
+    def calinski_harabasz_index(self, rangeTo):
+        X = self.data.loc[:, self.data.columns != 'CO2 Ratings']
+        K = range(2, rangeTo)
+
+        for k in K:
+            kmeans_model = KMeans(n_clusters=k).fit(X)
+            labels = kmeans_model.labels_
+            print(k, metrics.calinski_harabasz_score(X, labels))
 
     def silhouette_score(self, n_clusters):
         X = self.data.loc[:, self.data.columns != 'CO2 Ratings']
@@ -102,12 +122,6 @@ class Estimator:
         cluster_labels = clusterer.fit_predict(X)
 
         silhouette_avg = silhouette_score(X, cluster_labels)
-        print(
-            "For n_clusters =",
-            n_clusters,
-            "The average silhouette_score is :",
-            silhouette_avg,
-        )
 
         sample_silhouette_values = silhouette_samples(X, cluster_labels)
 
@@ -138,7 +152,7 @@ class Estimator:
         ax1.set_ylabel("Cluster label")
 
         ax1.axvline(x=silhouette_avg, color="red", linestyle="--")
-        ax1.set_yticks([])  # Clear the yaxis labels / ticks
+        ax1.set_yticks([])
         ax1.set_xticks([-0.1, 0, 0.2, 0.4, 0.6, 0.8, 1])
 
         plt.show()
@@ -148,9 +162,11 @@ if __name__ == '__main__':
     try:
         data = DataPreprocessing(r'C:\Users\tinva\Desktop\MY2022.csv').get_preprocessed_data()
 
-        estimator = Estimator(data)
-        estimator.silhouette_score(10)
-        estimator.elbow_method(10)
+        determine = DetermineCluster(data)
+        #determine.davies_bouldin_index(11)
+        #determine.calinski_harabasz_index(11)
+        #determine.silhouette_score(11)
+        #determine.elbow_method(11)
 
         knn = KNN(data)
         knn.train_data()
