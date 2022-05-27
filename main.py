@@ -2,18 +2,24 @@ import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
-from sklearn.metrics import classification_report, confusion_matrix
 from sklearn.metrics import silhouette_samples, silhouette_score
+from sklearn.metrics import davies_bouldin_score
 import matplotlib.cm as cm
-from sklearn.cluster import KMeans
 from sklearn import metrics
 import matplotlib.pyplot as plt
-from sklearn.metrics import davies_bouldin_score
+from sklearn.cluster import KMeans
+from sklearn.cluster import DBSCAN
+from sklearn.cluster import OPTICS
+from sklearn.cluster import AgglomerativeClustering
+from sklearn.cluster import BisectingKMeans
+from sklearn.metrics.cluster import adjusted_rand_score
+from sklearn.metrics.cluster import homogeneity_score
+from sklearn.metrics.cluster import completeness_score
+from sklearn.metrics.cluster import v_measure_score
 
 
-def write_results(title, text):
-    with open('results.txt', 'w') as f:
-        f.write(title + '\n' + '\n')
+def write_results(text):
+    with open('results.txt', 'a') as f:
         f.writelines('\n'.join(text))
 
 
@@ -47,27 +53,70 @@ class DataPreprocessing:
             df[name] = pd.factorize(df[name])[0]
 
 
-class KNN:
+class ClusteringAlgorithms:
 
     def __init__(self, data):
         self.data = data
 
-    def train_data(self):
         X = self.data.loc[:, self.data.columns != 'CO2 Ratings']
         y = self.data['CO2 Ratings']
 
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20)
+        self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(X, y, test_size=0.20)
 
-        knn = KNeighborsClassifier(n_neighbors=10)
-        knn.fit(X_train, y_train)
+    def k_means(self):
+        knn = KNeighborsClassifier(n_neighbors=4)
+        knn.fit(self.X_train, self.y_train)
+        y_pred = knn.predict(self.X_test)
 
-        y_pred = knn.predict(X_test)
-        write_results('KNN', [str(confusion_matrix(y_test, y_pred, labels=np.unique(y_pred))),
-                              str(classification_report(y_test, y_pred, labels=np.unique(y_pred)))])
+        write_results(['\nK means',
+                       'Rand index: ' + str(adjusted_rand_score(self.y_test, y_pred)),
+                       'Homogeneity: ' + str(homogeneity_score(self.y_test, y_pred)),
+                       'Completeness: ' + str(completeness_score(self.y_test, y_pred)),
+                       'V-measure: ' + str(v_measure_score(self.y_test, y_pred))])
 
-        self.data.insert(len(self.data.columns), "Prediction Results", knn.predict(X))
+    def dbscan(self):
+        dbscan = DBSCAN(eps=2.6, min_samples=3)
+        dbscan.fit(self.X_train, self.y_train)
+        y_pred = dbscan.fit_predict(self.X_test)
 
-        return self.data
+        write_results(['\n\nDBSCAN\n'
+                       'Rand index: ' + str(adjusted_rand_score(self.y_test, y_pred)),
+                       'Homogeneity: ' + str(homogeneity_score(self.y_test, y_pred)),
+                       'Completeness: ' + str(completeness_score(self.y_test, y_pred)),
+                       'V-measure: ' + str(v_measure_score(self.y_test, y_pred))])
+
+    def optics(self):
+        optics = OPTICS(min_samples=5, min_cluster_size=3)
+        optics.fit(self.X_train, self.y_train)
+        y_pred = optics.fit_predict(self.X_test)
+
+        write_results(['\n\nOPTICS\n'
+                       'Rand index: ' + str(adjusted_rand_score(self.y_test, y_pred)),
+                       'Homogeneity: ' + str(homogeneity_score(self.y_test, y_pred)),
+                       'Completeness: ' + str(completeness_score(self.y_test, y_pred)),
+                       'V-measure: ' + str(v_measure_score(self.y_test, y_pred))])
+
+    def agglomerative_clustering(self):
+        ac = AgglomerativeClustering(n_clusters=6)
+        ac.fit(self.X_train, self.y_train)
+        y_pred = ac.fit_predict(self.X_test)
+
+        write_results(['\n\nAgglomerative clustering\n'
+                       'Rand index: ' + str(adjusted_rand_score(self.y_test, y_pred)),
+                       'Homogeneity: ' + str(homogeneity_score(self.y_test, y_pred)),
+                       'Completeness: ' + str(completeness_score(self.y_test, y_pred)),
+                       'V-measure: ' + str(v_measure_score(self.y_test, y_pred))])
+
+    def bisect_means(self):
+        bm = BisectingKMeans(n_clusters=10)
+        bm.fit(self.X_train, self.y_train)
+        y_pred = bm.predict(self.X_test)
+
+        write_results(['\n\nBisecting KMeans\n'
+                       'Rand index: ' + str(adjusted_rand_score(self.y_test, y_pred)),
+                       'Homogeneity: ' + str(homogeneity_score(self.y_test, y_pred)),
+                       'Completeness: ' + str(completeness_score(self.y_test, y_pred)),
+                       'V-measure: ' + str(v_measure_score(self.y_test, y_pred))])
 
 
 class DetermineCluster:
@@ -162,13 +211,18 @@ if __name__ == '__main__':
     try:
         data = DataPreprocessing(r'C:\Users\tinva\Desktop\MY2022.csv').get_preprocessed_data()
 
-        determine = DetermineCluster(data)
-        #determine.davies_bouldin_index(11)
-        #determine.calinski_harabasz_index(11)
-        #determine.silhouette_score(11)
-        #determine.elbow_method(11)
+        # determine = DetermineCluster(data)
+        # determine.davies_bouldin_index(11)
+        # determine.calinski_harabasz_index(11)
+        # determine.silhouette_score(11)
+        # determine.elbow_method(11)
 
-        knn = KNN(data)
-        knn.train_data()
+        algorithm = ClusteringAlgorithms(data)
+        algorithm.k_means()
+        algorithm.dbscan()
+        algorithm.optics()
+        algorithm.agglomerative_clustering()
+        algorithm.bisect_means()
+
     except:
         print('Error while loading data')
