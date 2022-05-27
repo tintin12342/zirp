@@ -1,26 +1,319 @@
-KNN
+--------------1---------------
 
-[[ 1  2  0  0  0  0  0  0  0]
- [ 0  6  2  0  0  0  0  0  0]
- [ 0  2 31  4  1  0  0  0  0]
- [ 0  0  2 37  3  0  0  0  0]
- [ 0  0  0  8 47  2  0  0  0]
- [ 0  0  0  0  5 16  4  0  0]
- [ 0  0  0  0  0  0 12  0  0]
- [ 0  0  0  0  0  0  1  0  0]
- [ 0  0  0  0  0  0  1  1  1]]
-              precision    recall  f1-score   support
+K means
+Rand index: 0.6657613626636836
+Homogeneity: 0.7108424337970956
+Completeness: 0.7187405817951947
+V-measure: 0.7147696899859448
 
-           1       1.00      0.33      0.50         3
-           2       0.60      0.75      0.67         8
-           3       0.89      0.82      0.85        38
-           4       0.76      0.88      0.81        42
-           5       0.84      0.82      0.83        57
-           6       0.89      0.64      0.74        25
-           7       0.67      1.00      0.80        12
-           8       0.00      0.00      0.00         1
-           9       1.00      0.33      0.50         3
+DBSCAN
+Rand index: 0.14716009704466965
+Homogeneity: 0.3305925173565717
+Completeness: 0.3256142820280658
+V-measure: 0.32808451629533997
 
-    accuracy                           0.80       189
-   macro avg       0.74      0.62      0.63       189
-weighted avg       0.82      0.80      0.80       189
+OPTICS
+Rand index: 0.08304562587893173
+Homogeneity: 0.3902974380664055
+Completeness: 0.30842534687681783
+V-measure: 0.3445647553358262
+
+Agglomerative clustering
+Rand index: 0.2022103111672935
+Homogeneity: 0.3752753550122544
+Completeness: 0.38706609073515735
+V-measure: 0.3810795423077909
+
+Bisecting KMeans
+Rand index: 0.20398893456251194
+Homogeneity: 0.43205812226913437
+Completeness: 0.3454616981821487
+V-measure: 0.3839375632787171
+
+--------------2---------------
+
+K means
+Rand index: 0.575052910413704
+Homogeneity: 0.6718030465718351
+Completeness: 0.6848258773453343
+V-measure: 0.6782519562437332
+
+DBSCAN
+Rand index: 0.12995959648172847
+Homogeneity: 0.2895147845922351
+Completeness: 0.33990668746301084
+V-measure: 0.31269353135024996
+
+OPTICS
+Rand index: 0.0732840695444576
+Homogeneity: 0.36433862102177056
+Completeness: 0.3311360820138214
+V-measure: 0.3469447931459655
+
+Agglomerative clustering
+Rand index: 0.23470514198787557
+Homogeneity: 0.3304595460404169
+Completeness: 0.34481004258422765
+V-measure: 0.33748230947180596
+
+Bisecting KMeans
+Rand index: 0.22068701209371233
+Homogeneity: 0.4685315589356563
+Completeness: 0.36684155105055316
+V-measure: 0.4114971902768745
+
+--------------3---------------
+
+K means
+Rand index: 0.6417189305947667
+Homogeneity: 0.6900371819943698
+Completeness: 0.703705947529098
+V-measure: 0.6968045383681016
+
+DBSCAN
+Rand index: 0.14217843565103974
+Homogeneity: 0.239648648822494
+Completeness: 0.2704961331380698
+V-measure: 0.2541397466386671
+
+OPTICS
+Rand index: 0.03356233405676914
+Homogeneity: 0.3249075714700887
+Completeness: 0.3265909703026335
+V-measure: 0.3257470960298974
+
+Agglomerative clustering
+Rand index: 0.18748048240739323
+Homogeneity: 0.32754277808467763
+Completeness: 0.3490144567875335
+V-measure: 0.3379378975660374
+
+Bisecting KMeans
+Rand index: 0.330830440555293
+Homogeneity: 0.512838651710102
+Completeness: 0.43579294104327343
+V-measure: 0.47118705726579246
+
+--------------4---------------
+
+K means
+Rand index: 0.5064712103694982
+Homogeneity: 0.5813195140748049
+Completeness: 0.6165322790281409
+V-measure: 0.5984083288428472
+
+DBSCAN
+Rand index: 0.12264378081832714
+Homogeneity: 0.28832808791371795
+Completeness: 0.28126353410064664
+V-measure: 0.2847520007415034
+
+OPTICS
+Rand index: 0.009480392277307539
+Homogeneity: 0.1978774343940411
+Completeness: 0.25315709835655187
+V-measure: 0.2221296751534311
+
+Agglomerative clustering
+Rand index: 0.26701932453996785
+Homogeneity: 0.4139580575054068
+Completeness: 0.4400023183454024
+V-measure: 0.42658303628823063
+
+Bisecting KMeans
+Rand index: 0.24621308457069188
+Homogeneity: 0.4250855646350357
+Completeness: 0.3684723660233912
+V-measure: 0.39475954486019854
+
+--------------5---------------
+
+K means
+Rand index: 0.6406927876802686
+Homogeneity: 0.6950378070693949
+Completeness: 0.711664182631037
+V-measure: 0.7032527379463583
+
+DBSCAN
+Rand index: 0.11892342275528887
+Homogeneity: 0.31060425357716925
+Completeness: 0.32347658283744596
+V-measure: 0.31690975910907504
+
+OPTICS
+Rand index: 0.06799013243558141
+Homogeneity: 0.4295051490387669
+Completeness: 0.3481883457213599
+V-measure: 0.38459544365545056
+
+Agglomerative clustering
+Rand index: 0.22785498524928655
+Homogeneity: 0.37089846966758555
+Completeness: 0.3806135885221752
+V-measure: 0.3756932333397556
+
+Bisecting KMeans
+Rand index: 0.24596958704647584
+Homogeneity: 0.46622515864187414
+Completeness: 0.38116322325318874
+V-measure: 0.41942487772194315
+
+--------------6---------------
+
+K means
+Rand index: 0.7320818102092083
+Homogeneity: 0.7487289070552291
+Completeness: 0.7745122426678641
+V-measure: 0.7614023624020703
+
+DBSCAN
+Rand index: 0.10174968208840976
+Homogeneity: 0.2691152115141931
+Completeness: 0.2886493569057088
+V-measure: 0.27854021978189136
+
+OPTICS
+Rand index: 0.031576305589777816
+Homogeneity: 0.30601991642618387
+Completeness: 0.29498492494260387
+V-measure: 0.30040111448129797
+
+Agglomerative clustering
+Rand index: 0.29396706325446537
+Homogeneity: 0.3626534351005418
+Completeness: 0.39992626172877566
+V-measure: 0.38037895109426406
+
+Bisecting KMeans
+Rand index: 0.2618732503027281
+Homogeneity: 0.5143372315878337
+Completeness: 0.4116987295022666
+V-measure: 0.4573299389608076
+
+--------------7---------------
+
+K means
+Rand index: 0.5557965867424315
+Homogeneity: 0.6268212005490517
+Completeness: 0.6358933179515388
+V-measure: 0.6313246694158717
+
+DBSCAN
+Rand index: 0.11104430532116209
+Homogeneity: 0.29342703781372426
+Completeness: 0.30274759000963275
+V-measure: 0.29801445548297123
+
+OPTICS
+Rand index: 0.028143410265545496
+Homogeneity: 0.23887245808041993
+Completeness: 0.2517383935526852
+V-measure: 0.24513672561859984
+
+Agglomerative clustering
+Rand index: 0.17868595284979563
+Homogeneity: 0.3071560863277977
+Completeness: 0.318844595641244
+V-measure: 0.31289121869926967
+
+Bisecting KMeans
+Rand index: 0.23610337374097512
+Homogeneity: 0.4527265086840819
+Completeness: 0.3767127190592505
+V-measure: 0.41123647971315247
+
+--------------8---------------
+
+K means
+Rand index: 0.7042751145659195
+Homogeneity: 0.7321468415006014
+Completeness: 0.7603044176767524
+V-measure: 0.7459600098268118
+
+DBSCAN
+Rand index: 0.16841286657027577
+Homogeneity: 0.334745746678762
+Completeness: 0.36720898437830235
+V-measure: 0.3502267033025295
+
+OPTICS
+Rand index: 0.05829843807581912
+Homogeneity: 0.40293082621742793
+Completeness: 0.34428085377037954
+V-measure: 0.37130406971904956
+
+Agglomerative clustering
+Rand index: 0.28713138233548624
+Homogeneity: 0.37592338999881675
+Completeness: 0.4766279745337293
+V-measure: 0.4203279976057072
+
+Bisecting KMeans
+Rand index: 0.21719922227757416
+Homogeneity: 0.4292639296457738
+Completeness: 0.36657269560397976
+V-measure: 0.39544909300052894
+
+--------------9---------------
+
+K means
+Rand index: 0.6441079348433829
+Homogeneity: 0.694001450093724
+Completeness: 0.706233379736465
+V-measure: 0.700063988125674
+
+DBSCAN
+Rand index: 0.10438788268011814
+Homogeneity: 0.41866609810923944
+Completeness: 0.35246123533845447
+V-measure: 0.38272166925832996
+
+OPTICS
+Rand index: 0.024626130886408745
+Homogeneity: 0.2855451574865204
+Completeness: 0.33038746705298333
+V-measure: 0.30633396430900056
+
+Agglomerative clustering
+Rand index: 0.19967099024984308
+Homogeneity: 0.36836718526312867
+Completeness: 0.3970629387404288
+V-measure: 0.3821771642617976
+
+Bisecting KMeans
+Rand index: 0.20942341278370674
+Homogeneity: 0.4414208784663823
+Completeness: 0.37695606222472233
+V-measure: 0.406649473749704
+
+--------------10---------------
+
+K means
+Rand index: 0.6529430963588516
+Homogeneity: 0.687834224095367
+Completeness: 0.7104867679713022
+V-measure: 0.6989770125030998
+
+DBSCAN
+Rand index: 0.1440511099677013
+Homogeneity: 0.3665039492469144
+Completeness: 0.31346967771207207
+V-measure: 0.3379186200630734
+
+OPTICS
+Rand index: 0.03349597265095394
+Homogeneity: 0.3084949004398986
+Completeness: 0.25629505283033044
+V-measure: 0.27998273109614474
+
+Agglomerative clustering
+Rand index: 0.23334559980248648
+Homogeneity: 0.3199932254389627
+Completeness: 0.34143641355252635
+V-measure: 0.3303672312646102
+
+Bisecting KMeans
+Rand index: 0.21193717510915874
+Homogeneity: 0.4566062091390597
+Completeness: 0.34553883482931175
+V-measure: 0.3933831634767559
