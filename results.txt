@@ -1,269 +1,320 @@
------------------1-----------------
+
+----------------1----------------
 
 K means
-Silhouette: 0.29482596185526877
-Xalinski Harabasz: 359.36399612520404
-Davies Bouldin: 1.2158947845645751
+Silhouette: 0.29013461587780615
+Xalinski Harabasz: 350.4406303515062
+Davies Bouldin: 1.2283506600595564
+C-index: 0.11449749688699604
 
 Mini batch K means
-Silhouette: 0.30664223118346323
-Xalinski Harabasz: 357.86833912564845
-Davies Bouldin: 1.2023557735085617
+Silhouette: 0.25586003622982395
+Xalinski Harabasz: 308.87665940707063
+Davies Bouldin: 1.2827538756261827
+C-index: 0.15316191346959532
 
 Ward hierarchical clustering
-Silhouette: 0.256671856260275
-Xalinski Harabasz: 323.08419818111236
-Davies Bouldin: 1.3118357109426895
+Silhouette: 0.24696186375764387
+Xalinski Harabasz: 282.46497430606115
+Davies Bouldin: 1.1002523411943552
+C-index: 0.17072010708457583
 
 Agglomerative clustering
-Silhouette: 0.256671856260275
-Xalinski Harabasz: 323.08419818111236
-Davies Bouldin: 1.3118357109426895
+Silhouette: 0.24696186375764387
+Xalinski Harabasz: 282.46497430606115
+Davies Bouldin: 1.1002523411943552
+C-index: 0.17072010708457583
 
 Bisect means
-Silhouette: 0.30877893838701026
-Xalinski Harabasz: 323.6929878060384
-Davies Bouldin: 1.1788515627503289
+Silhouette: 0.29660097562680815
+Xalinski Harabasz: 322.91479649729706
+Davies Bouldin: 1.308262094609545
+C-index: 0.11296723010090833
 
------------------2-----------------
+----------------2----------------
 
 K means
-Silhouette: 0.3354928832602007
-Xalinski Harabasz: 354.69036653504037
-Davies Bouldin: 1.0994984765781126
+Silhouette: 0.34197012045406083
+Xalinski Harabasz: 364.1820429511198
+Davies Bouldin: 1.0758025934246154
+C-index: 0.09901917295224617
 
 Mini batch K means
-Silhouette: 0.3156189016491705
-Xalinski Harabasz: 342.43666067281663
-Davies Bouldin: 1.2125032687916328
+Silhouette: 0.3422400798826186
+Xalinski Harabasz: 363.4598542622628
+Davies Bouldin: 1.0884500322965027
+C-index: 0.09763021149659003
 
 Ward hierarchical clustering
-Silhouette: 0.2700013505283785
-Xalinski Harabasz: 323.946584637781
-Davies Bouldin: 1.2903295501573244
+Silhouette: 0.2510167372121714
+Xalinski Harabasz: 273.34714081269743
+Davies Bouldin: 1.1541004995470237
+C-index: 0.2117540064490177
 
 Agglomerative clustering
-Silhouette: 0.2700013505283785
-Xalinski Harabasz: 323.946584637781
-Davies Bouldin: 1.2903295501573244
+Silhouette: 0.2510167372121714
+Xalinski Harabasz: 273.34714081269743
+Davies Bouldin: 1.1541004995470237
+C-index: 0.2117540064490177
 
 Bisect means
-Silhouette: 0.298681174721271
-Xalinski Harabasz: 349.98316252058197
-Davies Bouldin: 1.2076046987857052
+Silhouette: 0.2877072400137696
+Xalinski Harabasz: 354.28654994827116
+Davies Bouldin: 1.251093355434476
+C-index: 0.1179523033919997
 
------------------3-----------------
+----------------3----------------
 
 K means
-Silhouette: 0.33327455707793424
-Xalinski Harabasz: 356.05307266456515
-Davies Bouldin: 1.0953948133835567
+Silhouette: 0.2970100226380377
+Xalinski Harabasz: 347.4263818505654
+Davies Bouldin: 1.207777374362685
+C-index: 0.11736781171631502
 
 Mini batch K means
-Silhouette: 0.33113380566003703
-Xalinski Harabasz: 351.90758033007376
-Davies Bouldin: 1.0974989145951788
+Silhouette: 0.3294774869149596
+Xalinski Harabasz: 341.25639594970204
+Davies Bouldin: 1.123613037176119
+C-index: 0.09205278283682139
 
 Ward hierarchical clustering
-Silhouette: 0.25704164214416797
-Xalinski Harabasz: 278.7951410844394
-Davies Bouldin: 1.2153178318839555
+Silhouette: 0.2549519295223895
+Xalinski Harabasz: 298.80798104335395
+Davies Bouldin: 1.3306127417391533
+C-index: 0.15194457296832373
 
 Agglomerative clustering
-Silhouette: 0.25704164214416797
-Xalinski Harabasz: 278.7951410844394
-Davies Bouldin: 1.2153178318839555
+Silhouette: 0.2549519295223895
+Xalinski Harabasz: 298.80798104335395
+Davies Bouldin: 1.3306127417391533
+C-index: 0.15194457296832373
 
 Bisect means
-Silhouette: 0.29020757717769796
-Xalinski Harabasz: 349.02844810720836
-Davies Bouldin: 1.216751419460433
+Silhouette: 0.2248165219409447
+Xalinski Harabasz: 229.23814708827942
+Davies Bouldin: 1.6239639378326916
+C-index: 0.19509797975315124
 
------------------4-----------------
+----------------4----------------
 
 K means
-Silhouette: 0.34310477744322965
-Xalinski Harabasz: 357.4628848772544
-Davies Bouldin: 1.0923032655520226
+Silhouette: 0.30286234502288506
+Xalinski Harabasz: 358.54419148864406
+Davies Bouldin: 1.1955218960006218
+C-index: 0.10883179092168715
 
 Mini batch K means
-Silhouette: 0.34343641610919046
-Xalinski Harabasz: 356.3388469953673
-Davies Bouldin: 1.0874139383215589
+Silhouette: 0.2942341121121486
+Xalinski Harabasz: 349.33418695109145
+Davies Bouldin: 1.1724556862595672
+C-index: 0.11042942280841535
 
 Ward hierarchical clustering
-Silhouette: 0.2758329612423916
-Xalinski Harabasz: 297.1141789347383
-Davies Bouldin: 1.1693199668731786
+Silhouette: 0.2403608046816854
+Xalinski Harabasz: 295.54429218243007
+Davies Bouldin: 1.2893422508142838
+C-index: 0.1479248776588157
 
 Agglomerative clustering
-Silhouette: 0.2758329612423916
-Xalinski Harabasz: 297.1141789347383
-Davies Bouldin: 1.1693199668731786
+Silhouette: 0.2403608046816854
+Xalinski Harabasz: 295.54429218243007
+Davies Bouldin: 1.2893422508142838
+C-index: 0.1479248776588157
 
 Bisect means
-Silhouette: 0.305258781697713
-Xalinski Harabasz: 335.5389384212832
-Davies Bouldin: 1.2503532015701089
+Silhouette: 0.2948348621114753
+Xalinski Harabasz: 352.2840349384788
+Davies Bouldin: 1.2086675008929615
+C-index: 0.110147517134077
 
------------------5-----------------
+----------------5----------------
 
 K means
-Silhouette: 0.3338242651761029
-Xalinski Harabasz: 351.6220611542761
-Davies Bouldin: 1.117266068281821
+Silhouette: 0.2952649892337506
+Xalinski Harabasz: 354.9309302692203
+Davies Bouldin: 1.2115492845923659
+C-index: 0.11500160261565127
 
 Mini batch K means
-Silhouette: 0.2192432697285218
-Xalinski Harabasz: 305.7751303706887
-Davies Bouldin: 1.261615886848946
+Silhouette: 0.344987481240246
+Xalinski Harabasz: 344.1852637535578
+Davies Bouldin: 1.1440762982595176
+C-index: 0.0962195090483725
 
 Ward hierarchical clustering
-Silhouette: 0.22404453063553556
-Xalinski Harabasz: 250.23397710020402
-Davies Bouldin: 1.0615356331733439
+Silhouette: 0.313420468653776
+Xalinski Harabasz: 297.52047225344296
+Davies Bouldin: 1.1132516823394896
+C-index: 0.12157885129872659
 
 Agglomerative clustering
-Silhouette: 0.22404453063553556
-Xalinski Harabasz: 250.23397710020402
-Davies Bouldin: 1.0615356331733439
+Silhouette: 0.313420468653776
+Xalinski Harabasz: 297.52047225344296
+Davies Bouldin: 1.1132516823394896
+C-index: 0.12157885129872659
 
 Bisect means
-Silhouette: 0.28238713733334697
-Xalinski Harabasz: 342.93561648949685
-Davies Bouldin: 1.2739510452425085
+Silhouette: 0.30487933403555423
+Xalinski Harabasz: 301.6747731109266
+Davies Bouldin: 1.2537007179853146
+C-index: 0.12774450450241429
 
------------------6-----------------
+----------------6----------------
 
 K means
-Silhouette: 0.3411415676691664
-Xalinski Harabasz: 356.1491917845232
-Davies Bouldin: 1.0865217232828603
+Silhouette: 0.29327568672730164
+Xalinski Harabasz: 350.98764593126214
+Davies Bouldin: 1.2129768471516602
+C-index: 0.10716325405208847
 
 Mini batch K means
-Silhouette: 0.3005202101145655
-Xalinski Harabasz: 352.84989880735907
-Davies Bouldin: 1.2161917546860581
+Silhouette: 0.2895537131631163
+Xalinski Harabasz: 345.82404353842696
+Davies Bouldin: 1.205977208583267
+C-index: 0.11470754939663662
 
 Ward hierarchical clustering
-Silhouette: 0.2706758552858548
-Xalinski Harabasz: 276.04481442685073
-Davies Bouldin: 1.207184309317228
+Silhouette: 0.2455379398220324
+Xalinski Harabasz: 234.37534726886602
+Davies Bouldin: 1.3290435770812616
+C-index: 0.195815433615017
 
 Agglomerative clustering
-Silhouette: 0.2706758552858548
-Xalinski Harabasz: 276.04481442685073
-Davies Bouldin: 1.207184309317228
+Silhouette: 0.2455379398220324
+Xalinski Harabasz: 234.37534726886602
+Davies Bouldin: 1.3290435770812616
+C-index: 0.195815433615017
 
 Bisect means
-Silhouette: 0.28702753779364
-Xalinski Harabasz: 344.60217885166105
-Davies Bouldin: 1.2551775854574125
+Silhouette: 0.28621354463757476
+Xalinski Harabasz: 340.52598820096324
+Davies Bouldin: 1.256524235080819
+C-index: 0.10748067021462682
 
------------------7-----------------
+----------------7----------------
 
 K means
-Silhouette: 0.3520138118875617
-Xalinski Harabasz: 371.4335679746335
-Davies Bouldin: 1.0745248945676151
+Silhouette: 0.28899094241337214
+Xalinski Harabasz: 347.26543072985805
+Davies Bouldin: 1.2333075612611233
+C-index: 0.10933638972867613
 
 Mini batch K means
-Silhouette: 0.29963110850823493
-Xalinski Harabasz: 361.95673581139306
-Davies Bouldin: 1.2065176912028543
+Silhouette: 0.28877525124394515
+Xalinski Harabasz: 343.2436707313953
+Davies Bouldin: 1.2138951848374206
+C-index: 0.11653696504836282
 
 Ward hierarchical clustering
-Silhouette: 0.28429927435518404
-Xalinski Harabasz: 295.1943190356935
-Davies Bouldin: 1.22482308508843
+Silhouette: 0.27139857100784476
+Xalinski Harabasz: 291.87845133547876
+Davies Bouldin: 1.2590212761837942
+C-index: 0.13336181609050055
 
 Agglomerative clustering
-Silhouette: 0.28429927435518404
-Xalinski Harabasz: 295.1943190356935
-Davies Bouldin: 1.22482308508843
+Silhouette: 0.27139857100784476
+Xalinski Harabasz: 291.87845133547876
+Davies Bouldin: 1.2590212761837942
+C-index: 0.13336181609050055
 
 Bisect means
-Silhouette: 0.3023526271890025
-Xalinski Harabasz: 358.3831687578207
-Davies Bouldin: 1.2277340885082602
+Silhouette: 0.2777500296318782
+Xalinski Harabasz: 340.14853012612
+Davies Bouldin: 1.271967190241698
+C-index: 0.11735803410900325
 
------------------8-----------------
+----------------8----------------
 
 K means
-Silhouette: 0.3061694194564932
-Xalinski Harabasz: 367.8864125835175
-Davies Bouldin: 1.1736422772732071
+Silhouette: 0.3427088516517295
+Xalinski Harabasz: 349.592675765025
+Davies Bouldin: 1.0939404609784908
+C-index: 0.09677078383119139
 
 Mini batch K means
-Silhouette: 0.30974515843376943
-Xalinski Harabasz: 351.22065005799067
-Davies Bouldin: 1.0937404695972586
+Silhouette: 0.3422848388278068
+Xalinski Harabasz: 348.67594055920074
+Davies Bouldin: 1.089031246601591
+C-index: 0.09944757605264973
 
 Ward hierarchical clustering
-Silhouette: 0.3042171876051397
-Xalinski Harabasz: 306.8823133580725
-Davies Bouldin: 1.1181850205345287
+Silhouette: 0.2392623139910055
+Xalinski Harabasz: 256.43765013795326
+Davies Bouldin: 1.2230603318603226
+C-index: 0.1809143392380936
 
 Agglomerative clustering
-Silhouette: 0.3042171876051397
-Xalinski Harabasz: 306.8823133580725
-Davies Bouldin: 1.1181850205345287
+Silhouette: 0.2392623139910055
+Xalinski Harabasz: 256.43765013795326
+Davies Bouldin: 1.2230603318603226
+C-index: 0.1809143392380936
 
 Bisect means
-Silhouette: 0.30885867463115324
-Xalinski Harabasz: 327.1891646561132
-Davies Bouldin: 1.2747347969502845
+Silhouette: 0.2891106617915976
+Xalinski Harabasz: 340.25315199345255
+Davies Bouldin: 1.2320942428104606
+C-index: 0.11523627208174614
 
------------------9-----------------
+----------------9----------------
 
 K means
-Silhouette: 0.2967513409032576
-Xalinski Harabasz: 352.206389837541
-Davies Bouldin: 1.2031424296751576
+Silhouette: 0.339010221910817
+Xalinski Harabasz: 355.91596768177413
+Davies Bouldin: 1.084653069191112
+C-index: 0.09704369230491527
 
 Mini batch K means
-Silhouette: 0.28223040507034103
-Xalinski Harabasz: 320.48181068126894
-Davies Bouldin: 1.1364892290450717
+Silhouette: 0.32235031097346223
+Xalinski Harabasz: 352.9877556467381
+Davies Bouldin: 1.1570819085856394
+C-index: 0.0996203383070617
 
 Ward hierarchical clustering
-Silhouette: 0.25790852591136004
-Xalinski Harabasz: 309.03156178425536
-Davies Bouldin: 1.2937534274246203
+Silhouette: 0.25708777631440344
+Xalinski Harabasz: 317.51144985305734
+Davies Bouldin: 1.286949954586614
+C-index: 0.13299668774365894
 
 Agglomerative clustering
-Silhouette: 0.25790852591136004
-Xalinski Harabasz: 309.03156178425536
-Davies Bouldin: 1.2937534274246203
+Silhouette: 0.25708777631440344
+Xalinski Harabasz: 317.51144985305734
+Davies Bouldin: 1.286949954586614
+C-index: 0.13299668774365894
 
 Bisect means
-Silhouette: 0.28253045993710824
-Xalinski Harabasz: 340.20161058482785
-Davies Bouldin: 1.2411575662488454
+Silhouette: 0.2807599070392263
+Xalinski Harabasz: 340.2588401145997
+Davies Bouldin: 1.24994147509305
+C-index: 0.12219457045239221
 
------------------10-----------------
+----------------10---------------
 
 K means
-Silhouette: 0.34123243490615995
-Xalinski Harabasz: 360.24392639029224
-Davies Bouldin: 1.1108460840040637
+Silhouette: 0.3319537783225847
+Xalinski Harabasz: 347.4301925242959
+Davies Bouldin: 1.1139568835966074
+C-index: 0.10157571083094327
 
 Mini batch K means
-Silhouette: 0.2960670201367973
-Xalinski Harabasz: 345.705394119656
-Davies Bouldin: 1.1972290057672805
+Silhouette: 0.3235623308016148
+Xalinski Harabasz: 344.6066333110774
+Davies Bouldin: 1.0919688894470747
+C-index: 0.10915896907212298
 
 Ward hierarchical clustering
-Silhouette: 0.24204828921827012
-Xalinski Harabasz: 304.2166614920733
-Davies Bouldin: 1.3070729785576802
+Silhouette: 0.2578714389769666
+Xalinski Harabasz: 310.54526991045356
+Davies Bouldin: 1.28469786505244
+C-index: 0.14665358857062805
 
 Agglomerative clustering
-Silhouette: 0.24204828921827012
-Xalinski Harabasz: 304.2166614920733
-Davies Bouldin: 1.3070729785576802
+Silhouette: 0.2578714389769666
+Xalinski Harabasz: 310.54526991045356
+Davies Bouldin: 1.28469786505244
+C-index: 0.14665358857062805
 
 Bisect means
-Silhouette: 0.30032865479669185
-Xalinski Harabasz: 351.4139939526972
-Davies Bouldin: 1.2199231788982645
+Silhouette: 0.2940367872277491
+Xalinski Harabasz: 345.31562303931315
+Davies Bouldin: 1.223475880680153
+C-index: 0.11094119067400349

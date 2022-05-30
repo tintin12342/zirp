@@ -8,6 +8,8 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 
 from sklearn.metrics import silhouette_samples, silhouette_score, davies_bouldin_score
+from c_index import calc_c_index
+
 from sklearn.cluster import KMeans, AgglomerativeClustering, BisectingKMeans, MiniBatchKMeans
 
 
@@ -148,51 +150,61 @@ class ClusteringAlgorithms:
         kmeans = KMeans(n_clusters=4)
         kmeans.fit(self.X_train)
         labels = kmeans.labels_
+        c_index_input = np.array(self.X_train).astype(float)
 
         write_results(['\nK means',
                        'Silhouette: ' + str(metrics.silhouette_score(self.X_train, labels, metric='euclidean')),
                        'Xalinski Harabasz: ' + str(metrics.calinski_harabasz_score(self.X_train, labels)),
-                       'Davies Bouldin: ' + str(davies_bouldin_score(self.X_train, labels))])
+                       'Davies Bouldin: ' + str(davies_bouldin_score(self.X_train, labels)),
+                       'C-index: ' + str(calc_c_index(c_index_input, labels))])
 
     def mini_batch_kmeans(self):
         kmeans = MiniBatchKMeans(n_clusters=4)
         kmeans.fit(self.X_train)
         labels = kmeans.labels_
+        c_index_input = np.array(self.X_train).astype(float)
 
         write_results(['\n\nMini batch K means',
                        'Silhouette: ' + str(metrics.silhouette_score(self.X_train, labels, metric='euclidean')),
                        'Xalinski Harabasz: ' + str(metrics.calinski_harabasz_score(self.X_train, labels)),
-                       'Davies Bouldin: ' + str(davies_bouldin_score(self.X_train, labels))])
+                       'Davies Bouldin: ' + str(davies_bouldin_score(self.X_train, labels)),
+                       'C-index: ' + str(calc_c_index(c_index_input, labels))])
 
     def agglomerative_clustering(self):
         ac = AgglomerativeClustering(n_clusters=4)
         ac.fit(self.X_train)
         labels = ac.labels_
+        c_index_input = np.array(self.X_train).astype(float)
 
         write_results(['\n\nAgglomerative clustering',
                        'Silhouette: ' + str(metrics.silhouette_score(self.X_train, labels, metric='euclidean')),
                        'Xalinski Harabasz: ' + str(metrics.calinski_harabasz_score(self.X_train, labels)),
-                       'Davies Bouldin: ' + str(davies_bouldin_score(self.X_train, labels))])
+                       'Davies Bouldin: ' + str(davies_bouldin_score(self.X_train, labels)),
+                       'C-index: ' + str(calc_c_index(c_index_input, labels))])
 
     def ward_hierarchical_clustering(self):
         ward = AgglomerativeClustering(n_clusters=4, linkage="ward")
         ward.fit(self.X_train)
         labels = ward.labels_
+        c_index_input = np.array(self.X_train).astype(float)
 
         write_results(['\n\nWard hierarchical clustering',
                        'Silhouette: ' + str(metrics.silhouette_score(self.X_train, labels, metric='euclidean')),
                        'Xalinski Harabasz: ' + str(metrics.calinski_harabasz_score(self.X_train, labels)),
-                       'Davies Bouldin: ' + str(davies_bouldin_score(self.X_train, labels))])
+                       'Davies Bouldin: ' + str(davies_bouldin_score(self.X_train, labels)),
+                       'C-index: ' + str(calc_c_index(c_index_input, labels))])
 
     def bisect_means(self):
         bm = BisectingKMeans(n_clusters=4)
         bm.fit(self.X_train)
         labels = bm.labels_
+        c_index_input = np.array(self.X_train).astype(float)
 
         write_results(['\n\nBisect means',
                        'Silhouette: ' + str(metrics.silhouette_score(self.X_train, labels, metric='euclidean')),
                        'Xalinski Harabasz: ' + str(metrics.calinski_harabasz_score(self.X_train, labels)),
-                       'Davies Bouldin: ' + str(davies_bouldin_score(self.X_train, labels))])
+                       'Davies Bouldin: ' + str(davies_bouldin_score(self.X_train, labels)),
+                       'C-index: ' + str(calc_c_index(c_index_input, labels))])
 
 
 if __name__ == '__main__':
@@ -212,5 +224,5 @@ if __name__ == '__main__':
         algorithm.agglomerative_clustering()
         algorithm.bisect_means()
 
-    except:
-        print('Error while loading data')
+    except Exception as err:
+        print(err)
