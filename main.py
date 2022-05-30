@@ -1,21 +1,14 @@
 import pandas as pd
 import numpy as np
-from sklearn.model_selection import train_test_split
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.metrics import silhouette_samples, silhouette_score
-from sklearn.metrics import davies_bouldin_score
-import matplotlib.cm as cm
 from sklearn import metrics
+
+import matplotlib.cm as cm
 import matplotlib.pyplot as plt
-from sklearn.cluster import KMeans
-from sklearn.cluster import DBSCAN
-from sklearn.cluster import OPTICS
-from sklearn.cluster import AgglomerativeClustering
-from sklearn.cluster import BisectingKMeans
-from sklearn.metrics.cluster import adjusted_rand_score
-from sklearn.metrics.cluster import homogeneity_score
-from sklearn.metrics.cluster import completeness_score
-from sklearn.metrics.cluster import v_measure_score
+
+from sklearn.model_selection import train_test_split
+
+from sklearn.metrics import silhouette_samples, silhouette_score, davies_bouldin_score
+from sklearn.cluster import KMeans, AgglomerativeClustering, BisectingKMeans, MiniBatchKMeans
 
 
 def write_results(text):
@@ -51,72 +44,6 @@ class DataPreprocessing:
     def _factorize_data(df, column_names):
         for name in column_names:
             df[name] = pd.factorize(df[name])[0]
-
-
-class ClusteringAlgorithms:
-
-    def __init__(self, data):
-        self.data = data
-
-        X = self.data.loc[:, self.data.columns != 'CO2 Ratings']
-        y = self.data['CO2 Ratings']
-
-        self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(X, y, test_size=0.20)
-
-    def k_means(self):
-        knn = KNeighborsClassifier(n_neighbors=4)
-        knn.fit(self.X_train, self.y_train)
-        y_pred = knn.predict(self.X_test)
-
-        write_results(['\nK means',
-                       'Rand index: ' + str(adjusted_rand_score(self.y_test, y_pred)),
-                       'Homogeneity: ' + str(homogeneity_score(self.y_test, y_pred)),
-                       'Completeness: ' + str(completeness_score(self.y_test, y_pred)),
-                       'V-measure: ' + str(v_measure_score(self.y_test, y_pred))])
-
-    def dbscan(self):
-        dbscan = DBSCAN(eps=2.6, min_samples=3)
-        dbscan.fit(self.X_train, self.y_train)
-        y_pred = dbscan.fit_predict(self.X_test)
-
-        write_results(['\n\nDBSCAN\n'
-                       'Rand index: ' + str(adjusted_rand_score(self.y_test, y_pred)),
-                       'Homogeneity: ' + str(homogeneity_score(self.y_test, y_pred)),
-                       'Completeness: ' + str(completeness_score(self.y_test, y_pred)),
-                       'V-measure: ' + str(v_measure_score(self.y_test, y_pred))])
-
-    def optics(self):
-        optics = OPTICS(min_samples=5, min_cluster_size=3)
-        optics.fit(self.X_train, self.y_train)
-        y_pred = optics.fit_predict(self.X_test)
-
-        write_results(['\n\nOPTICS\n'
-                       'Rand index: ' + str(adjusted_rand_score(self.y_test, y_pred)),
-                       'Homogeneity: ' + str(homogeneity_score(self.y_test, y_pred)),
-                       'Completeness: ' + str(completeness_score(self.y_test, y_pred)),
-                       'V-measure: ' + str(v_measure_score(self.y_test, y_pred))])
-
-    def agglomerative_clustering(self):
-        ac = AgglomerativeClustering(n_clusters=6)
-        ac.fit(self.X_train, self.y_train)
-        y_pred = ac.fit_predict(self.X_test)
-
-        write_results(['\n\nAgglomerative clustering\n'
-                       'Rand index: ' + str(adjusted_rand_score(self.y_test, y_pred)),
-                       'Homogeneity: ' + str(homogeneity_score(self.y_test, y_pred)),
-                       'Completeness: ' + str(completeness_score(self.y_test, y_pred)),
-                       'V-measure: ' + str(v_measure_score(self.y_test, y_pred))])
-
-    def bisect_means(self):
-        bm = BisectingKMeans(n_clusters=10)
-        bm.fit(self.X_train, self.y_train)
-        y_pred = bm.predict(self.X_test)
-
-        write_results(['\n\nBisecting KMeans\n'
-                       'Rand index: ' + str(adjusted_rand_score(self.y_test, y_pred)),
-                       'Homogeneity: ' + str(homogeneity_score(self.y_test, y_pred)),
-                       'Completeness: ' + str(completeness_score(self.y_test, y_pred)),
-                       'V-measure: ' + str(v_measure_score(self.y_test, y_pred))])
 
 
 class DetermineCluster:
@@ -207,6 +134,67 @@ class DetermineCluster:
         plt.show()
 
 
+class ClusteringAlgorithms:
+
+    def __init__(self, data):
+        self.data = data
+
+        X = self.data.loc[:, self.data.columns != 'CO2 Ratings']
+        y = self.data['CO2 Ratings']
+
+        self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(X, y, test_size=0.20)
+
+    def k_means(self):
+        kmeans = KMeans(n_clusters=4)
+        kmeans.fit(self.X_train)
+        labels = kmeans.labels_
+
+        write_results(['\nK means',
+                       'Silhouette: ' + str(metrics.silhouette_score(self.X_train, labels, metric='euclidean')),
+                       'Xalinski Harabasz: ' + str(metrics.calinski_harabasz_score(self.X_train, labels)),
+                       'Davies Bouldin: ' + str(davies_bouldin_score(self.X_train, labels))])
+
+    def mini_batch_kmeans(self):
+        kmeans = MiniBatchKMeans(n_clusters=4)
+        kmeans.fit(self.X_train)
+        labels = kmeans.labels_
+
+        write_results(['\n\nMini batch K means',
+                       'Silhouette: ' + str(metrics.silhouette_score(self.X_train, labels, metric='euclidean')),
+                       'Xalinski Harabasz: ' + str(metrics.calinski_harabasz_score(self.X_train, labels)),
+                       'Davies Bouldin: ' + str(davies_bouldin_score(self.X_train, labels))])
+
+    def agglomerative_clustering(self):
+        ac = AgglomerativeClustering(n_clusters=4)
+        ac.fit(self.X_train)
+        labels = ac.labels_
+
+        write_results(['\n\nAgglomerative clustering',
+                       'Silhouette: ' + str(metrics.silhouette_score(self.X_train, labels, metric='euclidean')),
+                       'Xalinski Harabasz: ' + str(metrics.calinski_harabasz_score(self.X_train, labels)),
+                       'Davies Bouldin: ' + str(davies_bouldin_score(self.X_train, labels))])
+
+    def ward_hierarchical_clustering(self):
+        ward = AgglomerativeClustering(n_clusters=4, linkage="ward")
+        ward.fit(self.X_train)
+        labels = ward.labels_
+
+        write_results(['\n\nWard hierarchical clustering',
+                       'Silhouette: ' + str(metrics.silhouette_score(self.X_train, labels, metric='euclidean')),
+                       'Xalinski Harabasz: ' + str(metrics.calinski_harabasz_score(self.X_train, labels)),
+                       'Davies Bouldin: ' + str(davies_bouldin_score(self.X_train, labels))])
+
+    def bisect_means(self):
+        bm = BisectingKMeans(n_clusters=4)
+        bm.fit(self.X_train)
+        labels = bm.labels_
+
+        write_results(['\n\nBisect means',
+                       'Silhouette: ' + str(metrics.silhouette_score(self.X_train, labels, metric='euclidean')),
+                       'Xalinski Harabasz: ' + str(metrics.calinski_harabasz_score(self.X_train, labels)),
+                       'Davies Bouldin: ' + str(davies_bouldin_score(self.X_train, labels))])
+
+
 if __name__ == '__main__':
     try:
         data = DataPreprocessing(r'C:\Users\tinva\Desktop\MY2022.csv').get_preprocessed_data()
@@ -219,8 +207,8 @@ if __name__ == '__main__':
 
         algorithm = ClusteringAlgorithms(data)
         algorithm.k_means()
-        algorithm.dbscan()
-        algorithm.optics()
+        algorithm.mini_batch_kmeans()
+        algorithm.ward_hierarchical_clustering()
         algorithm.agglomerative_clustering()
         algorithm.bisect_means()
 
