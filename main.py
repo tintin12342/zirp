@@ -18,6 +18,11 @@ def write_results(text):
         f.writelines('\n'.join(text))
 
 
+def write_all_results(text):
+    with open('k_means_results.txt', 'a') as f:
+        f.writelines('\n'.join(text))
+
+
 class DataPreprocessing:
 
     def __init__(self, file_path):
@@ -141,10 +146,10 @@ class ClusteringAlgorithms:
     def __init__(self, data):
         self.data = data
 
-        X = self.data.loc[:, self.data.columns != 'CO2 Ratings']
+        self.X = self.data.loc[:, self.data.columns != 'CO2 Ratings']
         y = self.data['CO2 Ratings']
 
-        self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(X, y, test_size=0.20)
+        self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(self.X, y, test_size=0.20)
 
     def k_means(self):
         kmeans = KMeans(n_clusters=4)
@@ -157,6 +162,18 @@ class ClusteringAlgorithms:
                        'Xalinski Harabasz: ' + str(metrics.calinski_harabasz_score(self.X_train, labels)),
                        'Davies Bouldin: ' + str(davies_bouldin_score(self.X_train, labels)),
                        'C-index: ' + str(calc_c_index(c_index_input, labels))])
+
+    def k_means_all_data(self):
+        kmeans = KMeans(n_clusters=4)
+        kmeans.fit(self.X)
+        labels = kmeans.labels_
+        c_index_input = np.array(self.X).astype(float)
+
+        write_all_results(['\nK means all data',
+                           'Silhouette: ' + str(metrics.silhouette_score(self.X, labels, metric='euclidean')),
+                           'Xalinski Harabasz: ' + str(metrics.calinski_harabasz_score(self.X, labels)),
+                           'Davies Bouldin: ' + str(davies_bouldin_score(self.X, labels)),
+                           'C-index: ' + str(calc_c_index(c_index_input, labels))])
 
     def mini_batch_kmeans(self):
         kmeans = MiniBatchKMeans(n_clusters=4)
@@ -218,11 +235,12 @@ if __name__ == '__main__':
         # determine.elbow_method(11)
 
         algorithm = ClusteringAlgorithms(data)
-        algorithm.k_means()
+        algorithm.k_means_all_data()
+        """algorithm.k_means()
         algorithm.mini_batch_kmeans()
         algorithm.ward_hierarchical_clustering()
         algorithm.agglomerative_clustering()
-        algorithm.bisect_means()
+        algorithm.bisect_means()"""
 
     except Exception as err:
         print(err)
