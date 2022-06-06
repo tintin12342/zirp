@@ -1,0 +1,80 @@
+
+----------------1----------------
+
+K means all data
+Silhouette: 0.33759099419515654
+Xalinski Harabasz: 443.82949463428986
+Davies Bouldin: 1.0996961575353188
+C-index: 0.09879723354061942
+
+----------------2----------------
+
+K means all data
+Silhouette: 0.33719468269634906
+Xalinski Harabasz: 443.83017947227324
+Davies Bouldin: 1.101227838790551
+C-index: 0.09877979385407937
+
+----------------3----------------
+
+K means all data
+Silhouette: 0.33677728375821725
+Xalinski Harabasz: 443.8269222552592
+Davies Bouldin: 1.1031789363662148
+C-index: 0.09874705445586274
+
+----------------4----------------
+
+K means all data
+Silhouette: 0.33759099419515654
+Xalinski Harabasz: 443.82949463429014
+Davies Bouldin: 1.0996961575353188
+C-index: 0.09879723354061942
+
+----------------5----------------
+
+K means all data
+Silhouette: 0.33759099419515654
+Xalinski Harabasz: 443.82949463429003
+Davies Bouldin: 1.0996961575353188
+C-index: 0.09879723354061934
+
+----------------6----------------
+
+K means all data
+Silhouette: 0.33677728375821725
+Xalinski Harabasz: 443.8269222552591
+Davies Bouldin: 1.1031789363662148
+C-index: 0.09874705445586274
+
+----------------7----------------
+
+K means all data
+Silhouette: 0.33759099419515654
+Xalinski Harabasz: 443.82949463429014
+Davies Bouldin: 1.0996961575353188
+C-index: 0.09879723354061934
+
+----------------8----------------
+
+K means all data
+Silhouette: 0.33759099419515654
+Xalinski Harabasz: 443.82949463429003
+Davies Bouldin: 1.0996961575353188
+C-index: 0.09879723354061934
+
+----------------9----------------
+
+K means all data
+Silhouette: 0.33759099419515654
+Xalinski Harabasz: 443.82949463429003
+Davies Bouldin: 1.0996961575353188
+C-index: 0.09879723354061934
+
+----------------10---------------
+
+K means all data
+Silhouette: 0.33677728375821725
+Xalinski Harabasz: 443.8269222552592
+Davies Bouldin: 1.1031789363662148
+C-index: 0.09874705445586267

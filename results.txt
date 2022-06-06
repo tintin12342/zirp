@@ -1,0 +1,320 @@
+
+----------------1----------------
+
+K means
+Silhouette: 0.29013461587780615
+Xalinski Harabasz: 350.4406303515062
+Davies Bouldin: 1.2283506600595564
+C-index: 0.11449749688699604
+
+Mini batch K means
+Silhouette: 0.25586003622982395
+Xalinski Harabasz: 308.87665940707063
+Davies Bouldin: 1.2827538756261827
+C-index: 0.15316191346959532
+
+Ward hierarchical clustering
+Silhouette: 0.24696186375764387
+Xalinski Harabasz: 282.46497430606115
+Davies Bouldin: 1.1002523411943552
+C-index: 0.17072010708457583
+
+Agglomerative clustering
+Silhouette: 0.24696186375764387
+Xalinski Harabasz: 282.46497430606115
+Davies Bouldin: 1.1002523411943552
+C-index: 0.17072010708457583
+
+Bisect means
+Silhouette: 0.29660097562680815
+Xalinski Harabasz: 322.91479649729706
+Davies Bouldin: 1.308262094609545
+C-index: 0.11296723010090833
+
+----------------2----------------
+
+K means
+Silhouette: 0.34197012045406083
+Xalinski Harabasz: 364.1820429511198
+Davies Bouldin: 1.0758025934246154
+C-index: 0.09901917295224617
+
+Mini batch K means
+Silhouette: 0.3422400798826186
+Xalinski Harabasz: 363.4598542622628
+Davies Bouldin: 1.0884500322965027
+C-index: 0.09763021149659003
+
+Ward hierarchical clustering
+Silhouette: 0.2510167372121714
+Xalinski Harabasz: 273.34714081269743
+Davies Bouldin: 1.1541004995470237
+C-index: 0.2117540064490177
+
+Agglomerative clustering
+Silhouette: 0.2510167372121714
+Xalinski Harabasz: 273.34714081269743
+Davies Bouldin: 1.1541004995470237
+C-index: 0.2117540064490177
+
+Bisect means
+Silhouette: 0.2877072400137696
+Xalinski Harabasz: 354.28654994827116
+Davies Bouldin: 1.251093355434476
+C-index: 0.1179523033919997
+
+----------------3----------------
+
+K means
+Silhouette: 0.2970100226380377
+Xalinski Harabasz: 347.4263818505654
+Davies Bouldin: 1.207777374362685
+C-index: 0.11736781171631502
+
+Mini batch K means
+Silhouette: 0.3294774869149596
+Xalinski Harabasz: 341.25639594970204
+Davies Bouldin: 1.123613037176119
+C-index: 0.09205278283682139
+
+Ward hierarchical clustering
+Silhouette: 0.2549519295223895
+Xalinski Harabasz: 298.80798104335395
+Davies Bouldin: 1.3306127417391533
+C-index: 0.15194457296832373
+
+Agglomerative clustering
+Silhouette: 0.2549519295223895
+Xalinski Harabasz: 298.80798104335395
+Davies Bouldin: 1.3306127417391533
+C-index: 0.15194457296832373
+
+Bisect means
+Silhouette: 0.2248165219409447
+Xalinski Harabasz: 229.23814708827942
+Davies Bouldin: 1.6239639378326916
+C-index: 0.19509797975315124
+
+----------------4----------------
+
+K means
+Silhouette: 0.30286234502288506
+Xalinski Harabasz: 358.54419148864406
+Davies Bouldin: 1.1955218960006218
+C-index: 0.10883179092168715
+
+Mini batch K means
+Silhouette: 0.2942341121121486
+Xalinski Harabasz: 349.33418695109145
+Davies Bouldin: 1.1724556862595672
+C-index: 0.11042942280841535
+
+Ward hierarchical clustering
+Silhouette: 0.2403608046816854
+Xalinski Harabasz: 295.54429218243007
+Davies Bouldin: 1.2893422508142838
+C-index: 0.1479248776588157
+
+Agglomerative clustering
+Silhouette: 0.2403608046816854
+Xalinski Harabasz: 295.54429218243007
+Davies Bouldin: 1.2893422508142838
+C-index: 0.1479248776588157
+
+Bisect means
+Silhouette: 0.2948348621114753
+Xalinski Harabasz: 352.2840349384788
+Davies Bouldin: 1.2086675008929615
+C-index: 0.110147517134077
+
+----------------5----------------
+
+K means
+Silhouette: 0.2952649892337506
+Xalinski Harabasz: 354.9309302692203
+Davies Bouldin: 1.2115492845923659
+C-index: 0.11500160261565127
+
+Mini batch K means
+Silhouette: 0.344987481240246
+Xalinski Harabasz: 344.1852637535578
+Davies Bouldin: 1.1440762982595176
+C-index: 0.0962195090483725
+
+Ward hierarchical clustering
+Silhouette: 0.313420468653776
+Xalinski Harabasz: 297.52047225344296
+Davies Bouldin: 1.1132516823394896
+C-index: 0.12157885129872659
+
+Agglomerative clustering
+Silhouette: 0.313420468653776
+Xalinski Harabasz: 297.52047225344296
+Davies Bouldin: 1.1132516823394896
+C-index: 0.12157885129872659
+
+Bisect means
+Silhouette: 0.30487933403555423
+Xalinski Harabasz: 301.6747731109266
+Davies Bouldin: 1.2537007179853146
+C-index: 0.12774450450241429
+
+----------------6----------------
+
+K means
+Silhouette: 0.29327568672730164
+Xalinski Harabasz: 350.98764593126214
+Davies Bouldin: 1.2129768471516602
+C-index: 0.10716325405208847
+
+Mini batch K means
+Silhouette: 0.2895537131631163
+Xalinski Harabasz: 345.82404353842696
+Davies Bouldin: 1.205977208583267
+C-index: 0.11470754939663662
+
+Ward hierarchical clustering
+Silhouette: 0.2455379398220324
+Xalinski Harabasz: 234.37534726886602
+Davies Bouldin: 1.3290435770812616
+C-index: 0.195815433615017
+
+Agglomerative clustering
+Silhouette: 0.2455379398220324
+Xalinski Harabasz: 234.37534726886602
+Davies Bouldin: 1.3290435770812616
+C-index: 0.195815433615017
+
+Bisect means
+Silhouette: 0.28621354463757476
+Xalinski Harabasz: 340.52598820096324
+Davies Bouldin: 1.256524235080819
+C-index: 0.10748067021462682
+
+----------------7----------------
+
+K means
+Silhouette: 0.28899094241337214
+Xalinski Harabasz: 347.26543072985805
+Davies Bouldin: 1.2333075612611233
+C-index: 0.10933638972867613
+
+Mini batch K means
+Silhouette: 0.28877525124394515
+Xalinski Harabasz: 343.2436707313953
+Davies Bouldin: 1.2138951848374206
+C-index: 0.11653696504836282
+
+Ward hierarchical clustering
+Silhouette: 0.27139857100784476
+Xalinski Harabasz: 291.87845133547876
+Davies Bouldin: 1.2590212761837942
+C-index: 0.13336181609050055
+
+Agglomerative clustering
+Silhouette: 0.27139857100784476
+Xalinski Harabasz: 291.87845133547876
+Davies Bouldin: 1.2590212761837942
+C-index: 0.13336181609050055
+
+Bisect means
+Silhouette: 0.2777500296318782
+Xalinski Harabasz: 340.14853012612
+Davies Bouldin: 1.271967190241698
+C-index: 0.11735803410900325
+
+----------------8----------------
+
+K means
+Silhouette: 0.3427088516517295
+Xalinski Harabasz: 349.592675765025
+Davies Bouldin: 1.0939404609784908
+C-index: 0.09677078383119139
+
+Mini batch K means
+Silhouette: 0.3422848388278068
+Xalinski Harabasz: 348.67594055920074
+Davies Bouldin: 1.089031246601591
+C-index: 0.09944757605264973
+
+Ward hierarchical clustering
+Silhouette: 0.2392623139910055
+Xalinski Harabasz: 256.43765013795326
+Davies Bouldin: 1.2230603318603226
+C-index: 0.1809143392380936
+
+Agglomerative clustering
+Silhouette: 0.2392623139910055
+Xalinski Harabasz: 256.43765013795326
+Davies Bouldin: 1.2230603318603226
+C-index: 0.1809143392380936
+
+Bisect means
+Silhouette: 0.2891106617915976
+Xalinski Harabasz: 340.25315199345255
+Davies Bouldin: 1.2320942428104606
+C-index: 0.11523627208174614
+
+----------------9----------------
+
+K means
+Silhouette: 0.339010221910817
+Xalinski Harabasz: 355.91596768177413
+Davies Bouldin: 1.084653069191112
+C-index: 0.09704369230491527
+
+Mini batch K means
+Silhouette: 0.32235031097346223
+Xalinski Harabasz: 352.9877556467381
+Davies Bouldin: 1.1570819085856394
+C-index: 0.0996203383070617
+
+Ward hierarchical clustering
+Silhouette: 0.25708777631440344
+Xalinski Harabasz: 317.51144985305734
+Davies Bouldin: 1.286949954586614
+C-index: 0.13299668774365894
+
+Agglomerative clustering
+Silhouette: 0.25708777631440344
+Xalinski Harabasz: 317.51144985305734
+Davies Bouldin: 1.286949954586614
+C-index: 0.13299668774365894
+
+Bisect means
+Silhouette: 0.2807599070392263
+Xalinski Harabasz: 340.2588401145997
+Davies Bouldin: 1.24994147509305
+C-index: 0.12219457045239221
+
+----------------10---------------
+
+K means
+Silhouette: 0.3319537783225847
+Xalinski Harabasz: 347.4301925242959
+Davies Bouldin: 1.1139568835966074
+C-index: 0.10157571083094327
+
+Mini batch K means
+Silhouette: 0.3235623308016148
+Xalinski Harabasz: 344.6066333110774
+Davies Bouldin: 1.0919688894470747
+C-index: 0.10915896907212298
+
+Ward hierarchical clustering
+Silhouette: 0.2578714389769666
+Xalinski Harabasz: 310.54526991045356
+Davies Bouldin: 1.28469786505244
+C-index: 0.14665358857062805
+
+Agglomerative clustering
+Silhouette: 0.2578714389769666
+Xalinski Harabasz: 310.54526991045356
+Davies Bouldin: 1.28469786505244
+C-index: 0.14665358857062805
+
+Bisect means
+Silhouette: 0.2940367872277491
+Xalinski Harabasz: 345.31562303931315
+Davies Bouldin: 1.223475880680153
+C-index: 0.11094119067400349
